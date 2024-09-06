@@ -1,0 +1,52 @@
+// styles/header.module.scss
+
+$app-bar-bg: #4b0082;
+$link-hover-color: #ffd700;
+$button-hover-bg: rgba(255, 255, 255, 0.15);
+
+.appBar {
+  background-color: $app-bar-bg;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: lighten($app-bar-bg, 5%);
+  }
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.title {
+  flex-grow: 1;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.button {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  margin-left: 12px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s;
+
+  &:hover {
+    background-color: $button-hover-bg;
+    border-color: rgba(255, 255, 255, 1);
+  }
+}
